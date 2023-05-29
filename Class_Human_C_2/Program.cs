@@ -48,7 +48,7 @@ namespace Class_Human_C_2
                             Student student = new Student(surname, name, patronymic, birth, faculty, course, group);
                             people.Add(student);
                             
-                            Console.WriteLine("Данные студента добавлены:\n" + student); 
+                            Console.WriteLine("Данные студента добавлены:\n" + student.Print()); 
 
                             break;
 
@@ -66,7 +66,7 @@ namespace Class_Human_C_2
                             Employee employee = new Employee(surname, name, patronymic, birth, company, salary, experience);
                             people.Add(employee);
                             
-                            Console.WriteLine("Данные работника добавлены:\n" + employee);
+                            Console.WriteLine("Данные работника добавлены:\n" + employee.Print());
 
                             break;
 
@@ -90,7 +90,7 @@ namespace Class_Human_C_2
                             Driver driver = new Driver(surname, name, patronymic, birth, company3, salary3, experience3, brand, model);
                             people.Add(driver);
                             
-                            Console.WriteLine("Данные водителя добавлены:\n" + driver);
+                            Console.WriteLine("Данные водителя добавлены:\n" + driver.Print());
                             
                             break;
                     }
