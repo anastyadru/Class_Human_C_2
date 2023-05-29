@@ -42,7 +42,7 @@ namespace Class_Human_C_2
             return DateTime.Now.Year - BirthDate.Year;
         }
 
-        public virtual string Print()
+        protected string Print()
         {
             return $"Фамилия: {Surname}, Имя: {Name}, Отчество: {Patronymic}, Дата рождения: {BirthDate}";
         }
