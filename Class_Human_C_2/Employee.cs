@@ -49,7 +49,7 @@ namespace Class_Human_C_2
         
         public override string ToString()
         {
-            return $"{Print()}, Возраст: {CalculateAge()}, Компания: {Company}, ЗП: {Salary}, Опыт работы: {Experience}";
+            return $"{base.Print()}, Возраст: {CalculateAge()}, Компания: {Company}, ЗП: {Salary}, Опыт работы: {Experience}";
         }
         
     }
