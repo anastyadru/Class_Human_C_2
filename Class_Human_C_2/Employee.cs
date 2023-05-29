@@ -10,7 +10,7 @@ namespace Class_Human_C_2
         
         public int Experience { get; set; }
         
-        public Employee() // создала конструктор без параметров
+        protected Employee() // создала конструктор без параметров
         {
         }
 
@@ -34,22 +34,9 @@ namespace Class_Human_C_2
             Console.WriteLine("Объект {0} уничтожен", Company);
         }
 
-        public override string Surname { get; set; }
-        public override string Name { get; set; }
-        public override string Patronymic { get; set; }
-        public override DateTime BirthDate { get; set; }
-        
-        public override int CalculateAge()
-        {
-            int age = DateTime.Now.Year - BirthDate.Year;
-            if (DateTime.Now.DayOfYear < BirthDate.DayOfYear)
-                age--;
-            return age;
-        }
-        
         public new string Print()
         {
-            return $"{base.Print()}, Возраст: {CalculateAge()}, Компания: {Company}, ЗП: {Salary}, Опыт работы: {Experience}";
+            return $"{base.Print()}, Компания: {Company}, ЗП: {Salary}, Опыт работы: {Experience}";
         }
         
     }

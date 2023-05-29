@@ -4,13 +4,13 @@ namespace Class_Human_C_2
 {
     public abstract class Human // запретила возможность создавать класс, только наследников
     {
-        public abstract string Surname { get; set; }
+        public string Surname { get; set; }
         
-        public abstract string Name { get; set; }
+        public string Name { get; set; }
         
-        public abstract string Patronymic { get; set; }
+        public string Patronymic { get; set; }
         
-        public abstract DateTime BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
         
         protected Human() // создала конструктор без параметров
         {
@@ -37,14 +37,14 @@ namespace Class_Human_C_2
             Console.WriteLine("Объект {0} уничтожен", Surname);
         }
 
-        public virtual int CalculateAge() // высчитала возраст на данный момент
+        private int CalculateAge() // высчитала возраст на данный момент
         {
             return DateTime.Now.Year - BirthDate.Year;
         }
 
         protected string Print()
         {
-            return $"Фамилия: {Surname}, Имя: {Name}, Отчество: {Patronymic}, Дата рождения: {BirthDate}";
+            return $"Фамилия: {Surname}, Имя: {Name}, Отчество: {Patronymic}, Дата рождения: {BirthDate}, Возраст: {CalculateAge()}";
         }
 
     }

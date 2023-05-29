@@ -34,22 +34,9 @@ namespace Class_Human_C_2
             Console.WriteLine("Объект {0} уничтожен", Faculty);
         }
 
-        public override string Surname { get; set; }
-        public override string Name { get; set; }
-        public override string Patronymic { get; set; }
-        public override DateTime BirthDate { get; set; }
-
-        public override int CalculateAge()
-        {
-            int age = DateTime.Now.Year - BirthDate.Year;
-            if (DateTime.Now.DayOfYear < BirthDate.DayOfYear)
-                age--;
-            return age;
-        }
-
         public new string Print()
         {
-            return $"{base.Print()}, Возраст: {CalculateAge()}, Факультет: {Faculty}, Курс: {Course}, Группа: {Group}";
+            return $"{base.Print()}, Факультет: {Faculty}, Курс: {Course}, Группа: {Group}";
         }
         
     }
