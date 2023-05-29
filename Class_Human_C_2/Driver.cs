@@ -30,7 +30,7 @@ namespace Class_Human_C_2
             Console.WriteLine("Объект {0} уничтожен", Brand);
         }
         
-        public override string ToString()
+        public new string Print()
         {
             return $"{base.Print()}, Возраст: {CalculateAge()}, Компания: {Company}, ЗП: {Salary}, Опыт работы: {Experience}";
         }

@@ -47,7 +47,7 @@ namespace Class_Human_C_2
             return age;
         }
         
-        public override string ToString()
+        public new string Print()
         {
             return $"{base.Print()}, Возраст: {CalculateAge()}, Компания: {Company}, ЗП: {Salary}, Опыт работы: {Experience}";
         }
