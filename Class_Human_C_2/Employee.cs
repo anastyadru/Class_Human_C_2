@@ -43,20 +43,21 @@ namespace Class_Human_C_2
         {
             base.Edit();
             var fieldToEdit = int.Parse(Console.ReadLine());
+            
             switch (fieldToEdit)
             {
                 case 1:
-                    Console.WriteLine("Введите новую компанию:");
+                    Console.WriteLine("Введите новую компанию: ");
                     Company = Console.ReadLine();
                     break;
                 
                 case 2:
-                    Console.WriteLine("Введите новую зарплату:");
+                    Console.WriteLine("Введите новую зарплату: ");
                     Salary = int.Parse(Console.ReadLine());
                     break;
                 
                 case 3:
-                    Console.WriteLine("Введите новый опыт работы:");
+                    Console.WriteLine("Введите новый опыт работы: ");
                     Experience = int.Parse(Console.ReadLine());
                     break;
                 
