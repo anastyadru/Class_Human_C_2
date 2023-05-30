@@ -35,5 +35,53 @@ namespace Class_Human_C_2
             return $"{base.Print()}, Компания: {Company}, ЗП: {Salary}, Опыт работы: {Experience}, Бренд: {Brand}, Модель: {Model}";
         }
         
+        public override void Edit()
+        {
+            base.Edit();
+            var fieldToEdit = int.Parse(Console.ReadLine());
+            switch (fieldToEdit)
+            {
+                case 1:
+                    Console.WriteLine("Введите новую компанию:");
+                    Company = Console.ReadLine();
+                    break;
+                
+                case 2:
+                    Console.WriteLine("Введите новую зарплату:");
+                    Salary = int.Parse(Console.ReadLine());
+                    break;
+                
+                case 3:
+                    Console.WriteLine("Введите новый опыт работы:");
+                    Experience = int.Parse(Console.ReadLine());
+                    break;
+                
+                case 4:
+                    Console.WriteLine("Введите новый бренд:");
+                    Brand = Console.ReadLine();
+                    break;
+                
+                case 5:
+                    Console.WriteLine("Введите новую модель:");
+                    Model = Console.ReadLine();
+                    break;
+                
+                default:
+                    Console.WriteLine("Некорректный ввод");
+                    break;
+            }
+        }
+    
+        public new void Display()
+        {
+            Console.WriteLine($"ФИО: {Surname} {Name} {Patronymic}");
+            Console.WriteLine($"Дата рождения: {BirthDate.ToShortDateString()}");
+            Console.WriteLine($"Компания: {Company}");
+            Console.WriteLine($"Зарплата: {Salary}");
+            Console.WriteLine($"Опыт работы: {Experience}");
+            Console.WriteLine($"Бренд: {Brand}");
+            Console.WriteLine($"Модель: {Model}");
+        }
+        
     }
 }

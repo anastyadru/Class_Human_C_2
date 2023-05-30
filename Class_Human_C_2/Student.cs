@@ -72,7 +72,7 @@ namespace Class_Human_C_2
             }
         }
         
-        public void Display()
+        public new void Display()
         {
             Console.WriteLine($"ФИО: {Surname} {Name} {Patronymic}");
             Console.WriteLine($"Дата рождения: {BirthDate.ToShortDateString()}");
