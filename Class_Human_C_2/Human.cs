@@ -46,6 +46,15 @@ namespace Class_Human_C_2
         {
             return $"Фамилия: {Surname}, Имя: {Name}, Отчество: {Patronymic}, Дата рождения: {BirthDate}, Возраст: {CalculateAge()}";
         }
+        
+        public virtual void Edit()
+        {
+            Console.WriteLine("Выберите, что хотите отредактировать: ");
+            Console.WriteLine("1 - Фамилия");
+            Console.WriteLine("2 - Имя");
+            Console.WriteLine("3 - Отчество");
+            Console.WriteLine("4 - Дата рождения");
+        }
 
     }
 }
