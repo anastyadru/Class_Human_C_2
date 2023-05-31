@@ -4,11 +4,11 @@ namespace Class_Human_C_2
 {
     public class Employee : Human
     {
-        public string Company { get; set; }
+        protected string Company { get; set; }
         
-        public int Salary { get; set; }
+        protected int Salary { get; set; }
         
-        public int Experience { get; set; }
+        protected int Experience { get; set; }
         
         protected Employee() // создала конструктор без параметров
         {

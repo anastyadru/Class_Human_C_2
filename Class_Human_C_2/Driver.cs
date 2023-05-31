@@ -4,9 +4,9 @@ namespace Class_Human_C_2
 {
     internal sealed class Driver : Employee // запретила наследование от этого класса
     {
-        public string Brand { get; set; }
+        private string Brand { get; set; }
         
-        public string Model { get; set; }
+        private string Model { get; set; }
         
         public Driver() // создала конструктор без параметров
         {
@@ -32,7 +32,7 @@ namespace Class_Human_C_2
         
         public new string Print()
         {
-            return $"{base.Print()}, Компания: {Company}, ЗП: {Salary}, Опыт работы: {Experience}, Бренд: {Brand}, Модель: {Model}";
+            return $"{base.Print()}, Бренд: {Brand}, Модель: {Model}";
         }
         
         public override void Edit()

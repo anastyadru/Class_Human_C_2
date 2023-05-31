@@ -6,11 +6,11 @@ namespace Class_Human_C_2
     {
         public string Surname { get; set; }
         
-        public string Name { get; set; }
+        protected string Name { get; set; }
         
-        public string Patronymic { get; set; }
+        protected string Patronymic { get; set; }
         
-        public DateTime BirthDate { get; set; }
+        protected DateTime BirthDate { get; set; }
         
         protected Human() // создала конструктор без параметров
         {
@@ -37,9 +37,12 @@ namespace Class_Human_C_2
             Console.WriteLine("Объект {0} уничтожен", Surname);
         }
 
-        public int CalculateAge() // высчитала возраст на данный момент
+        protected int CalculateAge() // высчитала возраст на данный момент
         {
-            return DateTime.Now.Year - BirthDate.Year;
+            var age = DateTime.Now.Year - BirthDate.Year;
+            if (DateTime.Now.Month < BirthDate.Month || (DateTime.Now.Month == BirthDate.Month && DateTime.Now.Day < BirthDate.Day))
+                age--;
+            return age;
         }
 
         protected string Print()

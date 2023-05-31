@@ -4,11 +4,11 @@ namespace Class_Human_C_2
 {
     public class Student : Human
     {
-        public string Faculty { get; set; }
+        private string Faculty { get; set; }
         
-        public int Course { get; set; }
+        private int Course { get; set; }
         
-        public int Group { get; set; }
+        private int Group { get; set; }
         
         public Student() // создала конструктор без параметров
         {
