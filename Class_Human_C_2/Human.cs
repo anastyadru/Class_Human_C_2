@@ -37,7 +37,7 @@ namespace Class_Human_C_2
             Console.WriteLine("Объект {0} уничтожен", Surname);
         }
 
-        private int CalculateAge() // высчитала возраст на данный момент
+        public int CalculateAge() // высчитала возраст на данный момент
         {
             return DateTime.Now.Year - BirthDate.Year;
         }
@@ -77,6 +77,12 @@ namespace Class_Human_C_2
                     Console.WriteLine("Некорректный ввод");
                     break;
             }
+        }
+        
+        public virtual void Display()
+        {
+            Console.WriteLine($"ФИО: {Surname} {Name} {Patronymic}");
+            Console.WriteLine($"Возраст: {CalculateAge()}");
         }
         
     }

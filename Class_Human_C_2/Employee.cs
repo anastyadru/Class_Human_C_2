@@ -67,10 +67,10 @@ namespace Class_Human_C_2
             }
         }
 
-        public new void Display()
+        public override void Display()
         {
             Console.WriteLine($"ФИО: {Surname} {Name} {Patronymic}");
-            Console.WriteLine($"Дата рождения: {BirthDate.ToShortDateString()}");
+            Console.WriteLine($"Возраст: {CalculateAge()}");
             Console.WriteLine($"Компания: {Company}");
             Console.WriteLine($"Зарплата: {Salary}");
             Console.WriteLine($"Опыт работы: {Experience}");
