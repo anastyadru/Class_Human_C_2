@@ -109,16 +109,23 @@ namespace Class_Human_C_2
                         {
                             ((Student)personToEdit).Edit();
                         }
+                        
                         else if (personToEdit is Employee)
                         {
                             ((Employee)personToEdit).Edit();
                         }
-                        else if (personToEdit is Driver)
+                        
+                        else
                         {
                             ((Driver)personToEdit).Edit();
                         }
 
                         Console.WriteLine("Изменения сохранены");
+                    }
+                    
+                    else
+                    {
+                        Console.WriteLine("Человек с такой фамилией не найден");
                     }
                     break;
                     
