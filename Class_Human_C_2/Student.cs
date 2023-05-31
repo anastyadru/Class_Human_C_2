@@ -47,25 +47,20 @@ namespace Class_Human_C_2
             switch (fieldToEdit)
             {
                 case 1:
-                    Console.WriteLine("Введите новую фамилию: ");
-                    Surname = Console.ReadLine();
+                    Console.WriteLine("Введите новый факультет: ");
+                    Faculty = Console.ReadLine();
                     break;
                 
                 case 2:
-                    Console.WriteLine("Введите новое имя: ");
-                    Name = Console.ReadLine();
+                    Console.WriteLine("Введите новый курс: ");
+                    Course = int.Parse(Console.ReadLine());
                     break;
                 
                 case 3:
-                    Console.WriteLine("Введите новое отчество: ");
-                    Patronymic = Console.ReadLine();
+                    Console.WriteLine("Введите новую группу: ");
+                    Group = int.Parse(Console.ReadLine());
                     break;
-                
-                case 4:
-                    Console.WriteLine("Введите новую дату рождения: ");
-                    BirthDate = DateTime.Parse(Console.ReadLine());
-                    break;
-                
+
                 default:
                     Console.WriteLine("Некорректный ввод");
                     break;
