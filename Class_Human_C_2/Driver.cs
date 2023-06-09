@@ -43,26 +43,11 @@ namespace Class_Human_C_2
             switch (fieldToEdit)
             {
                 case 1:
-                    Console.WriteLine("Введите новую компанию: ");
-                    Company = Console.ReadLine();
-                    break;
-                
-                case 2:
-                    Console.WriteLine("Введите новую зарплату: ");
-                    Salary = int.Parse(Console.ReadLine());
-                    break;
-                
-                case 3:
-                    Console.WriteLine("Введите новый опыт работы: ");
-                    Experience = int.Parse(Console.ReadLine());
-                    break;
-                
-                case 4:
                     Console.WriteLine("Введите новый бренд: ");
                     Brand = Console.ReadLine();
                     break;
                 
-                case 5:
+                case 2:
                     Console.WriteLine("Введите новую модель: ");
                     Model = Console.ReadLine();
                     break;
@@ -72,14 +57,10 @@ namespace Class_Human_C_2
                     break;
             }
         }
-    
-        public override void Display()
+
+        protected override void Display()
         {
-            Console.WriteLine($"ФИО: {Surname} {Name} {Patronymic}");
-            Console.WriteLine($"Возраст: {CalculateAge()}");
-            Console.WriteLine($"Компания: {Company}");
-            Console.WriteLine($"Зарплата: {Salary}");
-            Console.WriteLine($"Опыт работы: {Experience}");
+            base.Display();
             Console.WriteLine($"Бренд: {Brand}");
             Console.WriteLine($"Модель: {Model}");
         }

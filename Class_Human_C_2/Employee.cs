@@ -4,11 +4,11 @@ namespace Class_Human_C_2
 {
     public class Employee : Human
     {
-        protected string Company { get; set; }
-        
-        protected int Salary { get; set; }
-        
-        protected int Experience { get; set; }
+        private string Company { get; set; }
+
+        private int Salary { get; set; }
+
+        private int Experience { get; set; }
         
         protected Employee() // создала конструктор без параметров
         {
@@ -67,10 +67,9 @@ namespace Class_Human_C_2
             }
         }
 
-        public override void Display()
+        protected override void Display()
         {
-            Console.WriteLine($"ФИО: {Surname} {Name} {Patronymic}");
-            Console.WriteLine($"Возраст: {CalculateAge()}");
+            base.Display();
             Console.WriteLine($"Компания: {Company}");
             Console.WriteLine($"Зарплата: {Salary}");
             Console.WriteLine($"Опыт работы: {Experience}");

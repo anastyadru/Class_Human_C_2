@@ -66,11 +66,10 @@ namespace Class_Human_C_2
                     break;
             }
         }
-        
-        public override void Display()
+
+        protected override void Display()
         {
-            Console.WriteLine($"ФИО: {Surname} {Name} {Patronymic}");
-            Console.WriteLine($"Возраст: {CalculateAge()}");
+            base.Display();
             Console.WriteLine($"Факультет: {Faculty}");
             Console.WriteLine($"Курс: {Course}");
             Console.WriteLine($"Группа: {Group}");

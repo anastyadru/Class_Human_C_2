@@ -5,12 +5,12 @@ namespace Class_Human_C_2
     public abstract class Human // запретила возможность создавать класс, только наследников
     {
         public string Surname { get; set; }
-        
-        protected string Name { get; set; }
-        
-        protected string Patronymic { get; set; }
-        
-        protected DateTime BirthDate { get; set; }
+
+        private string Name { get; set; }
+
+        private string Patronymic { get; set; }
+
+        private DateTime BirthDate { get; set; }
         
         protected Human() // создала конструктор без параметров
         {
@@ -37,7 +37,7 @@ namespace Class_Human_C_2
             Console.WriteLine("Объект {0} уничтожен", Surname);
         }
 
-        protected int CalculateAge() // высчитала возраст на данный момент
+        private int CalculateAge() // высчитала возраст на данный момент
         {
             var age = DateTime.Now.Year - BirthDate.Year;
             if (DateTime.Now.Month < BirthDate.Month || (DateTime.Now.Month == BirthDate.Month && DateTime.Now.Day < BirthDate.Day))
@@ -81,8 +81,8 @@ namespace Class_Human_C_2
                     break;
             }
         }
-        
-        public virtual void Display()
+
+        protected virtual void Display()
         {
             Console.WriteLine($"ФИО: {Surname} {Name} {Patronymic}");
             Console.WriteLine($"Возраст: {CalculateAge()}");
