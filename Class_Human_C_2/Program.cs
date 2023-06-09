@@ -123,21 +123,7 @@ namespace Class_Human_C_2
 
             if (personToEdit != null)
             {
-                if (personToEdit is Student)
-                {
-                    ((Student)personToEdit).Edit();
-                }
-                        
-                else if (personToEdit is Employee)
-                {
-                    ((Employee)personToEdit).Edit();
-                }
-                        
-                else
-                {
-                    ((Driver)personToEdit).Edit();
-                }
-
+                personToEdit.Edit();
                 Console.WriteLine("Изменения сохранены");
             }
                     
